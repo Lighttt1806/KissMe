@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Theme Switcher</title>
+    <link rel="stylesheet" href="styles.css">
+<style>
+  :root {
+    --background-color-light: white;
+    --text-color-light: black;
+    --background-color-dark: black;
+    --text-color-dark: white;
+}
+
+body {
+    background-color: var(--background-color-light);
+    color: var(--text-color-light);
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.dark-theme {
+    background-color: var(--background-color-dark);
+    color: var(--text-color-dark);
+}
+</style>
+</head>
+<body>
+    <div class="container">
+        <h1>Theme Switcher Example</h1>
+        <button onclick="toggleTheme()">Toggle Theme</button>
+        <p>This is a paragraph with some text.</p>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+<script>
+  const container = document.querySelector('.container');
+
+function toggleTheme() {
+    container.classList.toggle('dark-theme');
+}
+</script>
+</html>

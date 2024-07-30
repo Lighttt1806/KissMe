@@ -1,0 +1,103 @@
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+.con-box {
+    position: relative;
+}
+
+.box-movies {
+    display: flex;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    /* Add any other styling needed */
+}
+
+.fa-less-than, .fa-greater-than {
+    cursor: pointer;
+    display: inline;
+}
+
+#scrollLeftContinue, #scrollLeftLatest, #scrollLeftTopKDrama, #scrollLeftTopCDrama {
+    display: none; /* Initially hide left buttons */
+}
+  </style>
+</head>
+<body>
+  <!-- Continue Watching Section -->
+<div class="con-box mt-5 p-3">
+  <h4 class="mx-4" style="font-weight: 700;">Continue Watching</h4>
+  <div class="d-flex">
+      <i class="fa fa-less-than" id="scrollLeftContinue" onclick="scrollLeft('continue-watching')"></i>&emsp;
+      <div class="box-movies mt-2 p-3" id="continue-watching">
+          <!-- Add your content here -->
+      </div>&emsp;
+      <i class="fa fa-greater-than" id="scrollRightContinue" onclick="scrollRight('continue-watching')"></i>
+  </div>
+</div>
+
+<!-- Latest Update Section -->
+<div class="con-box mt-5 p-3">
+  <h4 class="mx-4" style="font-weight: 700;">Latest Update</h4>
+  <div class="d-flex">
+      <i class="fa fa-less-than" id="scrollLeftLatest" onclick="scrollLeft('latest-update')"></i>&emsp;
+      <div class="box-movies mt-2 p-3" id="latest-update">
+          <!-- Add your content here -->
+      </div>&emsp;
+      <i class="fa fa-greater-than" id="scrollRightLatest" onclick="scrollRight('latest-update')"></i>
+  </div>
+</div>
+
+<!-- Repeat for other sections as needed -->
+</body>
+<script>
+  function scrollLeft(containerId) {
+    const container = document.getElementById(containerId);
+    container.scrollBy({
+        left: -300,
+        behavior: 'smooth'
+    });
+    updateButtonVisibility(containerId);
+}
+
+function scrollRight(containerId) {
+    const container = document.getElementById(containerId);
+    container.scrollBy({
+        left: 300,
+        behavior: 'smooth'
+    });
+    updateButtonVisibility(containerId);
+}
+
+function updateButtonVisibility(containerId) {
+    const container = document.getElementById(containerId);
+    const scrollLeftButton = document.querySelector(#scrollLeft${capitalize(containerId)});
+    const scrollRightButton = document.querySelector(#scrollRight${capitalize(containerId)});
+    
+    if (container.scrollLeft <= 0) {
+        scrollLeftButton.style.display = 'none';
+    } else {
+        scrollLeftButton.style.display = 'inline';
+    }
+
+    if (container.scrollLeft + container.clientWidth >= container.scrollWidth) {
+        scrollRightButton.style.display = 'none';
+    } else {
+        scrollRightButton.style.display = 'inline';
+    }
+}
+
+function capitalize(str) {
+    return str.charAt(0).toUpperCase() + str.slice(1);
+}
+
+// Initial check for button visibility
+document.addEventListener('DOMContentLoaded', () => {
+    updateButtonVisibility('continue-watching');
+    updateButtonVisibility('latest-update');
+    // Add more calls for other sections if needed
+});
+</script>
+</html>

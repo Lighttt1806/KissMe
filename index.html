@@ -1,0 +1,422 @@
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="index.css">
+  
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+  <title>KissMe | Donghua Anime Movies</title>
+  <link rel="icon" href="pic.png" >
+</head>
+<body class=" w-100 h-auto">
+  <header>
+    <div style="height: 9vh;" class="container-fluid navbar navbar-expand-lg w-100 p-3">
+      <button class="navbar-toggler text-secondary" data-bs-toggle="offcanvas" data-bs-target="#canvas">
+        <i class="fa-solid fa-bars"></i>
+      </button>
+      <h1 class="w-25">Kiss<strong>Me</strong></h1>
+      <div class="collapse w-50 navbar-collapse  justify-content-end">
+        <ul class="d-flex list-unstyled mt-3 p-3">
+          <li><a href="#"><i class="fa fa-home"></i>Home</a></li>
+          <li><a href="#" data-bs-toggle="offcanvas" data-bs-target="#offcanvasLeft" aria-controls="offcanvasRight"><i class="fa-solid fa-message"></i> FAQ</a></li>
+          <li onclick="toggleTheme()"><a href="#"><i class="fa-solid fa-palette"></i> Theme</a></li>
+          <li><a href="#" data-bs-toggle="modal" data-bs-target="#exampleModal"><i class="fa-solid fa-comment-dots"></i> Request Drama</a></li>
+          <li><a href="#"  data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight"><i class="fa-brands fa-google-play"></i> Explore</a></li>
+        </ul>
+      </div>
+      <div class="drp w-25 d-flex justify-content-end">
+        <div class="BotCan">
+          <span><i class="fa fa-search mt-2" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasBottom" aria-controls="offcanvasBottom"></i></span>
+
+
+        </div>
+
+        <div class="dropdown">
+          <button class="dropbtn" type="button">P</button>
+          <div class="dropdown-content">
+            <div class="profile-name d-flex justify-content-between">
+              <button type="button">P</button>
+              <p>Proem Ponleu</p>
+            </div>
+            <ul>
+              <li ><a href="#" ><i class="fa-solid fa-clock-rotate-left"></i>&#160; HIstory List</a></li>
+              <li><a href="#"><i class="fa-regular fa-heart"></i>&#160; Favorite List</a></li>
+              <li><a href="#"><i class="fa-solid fa-arrow-right-from-bracket"></i>&#160; Sign Out</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <div class="LeftCan">
+      <div id="canvas" class="offcanvas offcanvas-start bg-dark" tabindex="-1" style="width: 30%;">
+        <div style="height: 10vh;" class="offcanvas-title d-flex justify-content-between p-3">
+          <h1 class="text-light">Kiss<strong>Me</strong></h1>
+          <button data-bs-dismiss="offcanvas" class="btn btn-close mt-3"></button>
+        </div>
+        <hr>
+        <div class="justify-content-end">
+          <ul class="list-unstyled mt-3">
+            <li><a href="#">Home</a></li>
+            <li><a href="#" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">FAQ</a></li>
+            <li onclick="toggleTheme()"><a href="#">Theme</a></li>
+            <li><a href="#" data-bs-toggle="modal" data-bs-target="#exampleModal">Request Drama</a></li>
+            <li><a href="#" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">Explore</a></li>
+          </ul>
+        </div>
+        <div class="offcanvas-body small"></div>
+      </div>
+    </div>
+    
+  </header>
+
+  <!--  -->
+  <div class=" w-100">
+    <div id="carouselExampleInterval" class="carousel slide" data-bs-ride="carousel">
+      <div class="carousel-indicators">
+        <button type="button" data-bs-target="#carouselExampleInterval" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+        <button type="button" data-bs-target="#carouselExampleInterval" data-bs-slide-to="1" aria-label="Slide 2"></button>
+        <button type="button" data-bs-target="#carouselExampleInterval" data-bs-slide-to="2" aria-label="Slide 3"></button>
+        <button type="button" data-bs-target="#carouselExampleInterval" data-bs-slide-to="3" aria-label="Slide 4"></button>
+        <button type="button" data-bs-target="#carouselExampleInterval" data-bs-slide-to="4" aria-label="Slide 5"></button>
+        <button type="button" data-bs-target="#carouselExampleInterval" data-bs-slide-to="5" aria-label="Slide 6"></button>
+      </div>
+      <div class="carousel-inner">
+        <div class="carousel-item active" data-bs-interval="2000">
+          <img src="https://movies.sterkinekor.co.za/CDN/media/entity/get/FilmTitleGraphic/HO00002989?referenceScheme=HeadOffice&allowPlaceHolder=true" class="d-block w-100" alt="...">
+          <div class="carousel-caption">
+            <p class="w-25">Inside Out 2</p>
+          </div>
+        </div>
+        <div class="carousel-item" data-bs-interval="4000">
+          <img src="https://prod-images.viu.com/708175124/1d3ca9e0cd9cac0d7e57839ac82b9ed41c5a8013?im=Resize,width=1920" class="d-block w-100" alt="...">
+          <div class="carousel-caption">
+            <p class="w-25">Lovely Runner</p>
+          </div>
+        </div>
+        <div class="carousel-item" data-bs-interval="4000">
+          <img src="https://www.maomaohype.com/wp-content/uploads/2024/06/Chinese-Drama-The-Double-Trending3.webp" class="d-block w-100" alt="...">
+          <div class="carousel-caption">
+            <p class="w-25">The Double</p>
+          </div>
+        </div>
+        <div class="carousel-item" data-bs-interval="4000">
+          <img src="https://pic-bstarstatic.akamaized.net/ugc/d31f0933354245b0ac2ead5ddedb2248.jpg" class="d-block w-100" alt="...">
+          <div class="carousel-caption">
+            <p class="w-25">As Beautiful As You</p>
+          </div>
+        </div>
+        <div class="carousel-item" data-bs-interval="4000">
+          <img src="https://lh3.googleusercontent.com/-iMNi-Dg0SQY/Zn5ufPA_9KI/AAAAAAAAKVE/7BtKdxVHSesnk_U6IOCJHHZVZ6ys5v5hwCNcBGAsYHQ/h800/princess%2Broyal%2Bposter.jpeg" class="d-block w-100" alt="...">
+          <div class="carousel-caption">
+            <p class="w-25">The Royal Princess</p>
+          </div>
+        </div>
+        <div class="carousel-item" data-bs-interval="4000">
+          <img src="https://www.comingsoon.net/wp-content/uploads/sites/3/2024/02/We-Are-Series-cast.jpg" class="d-block w-100" alt="...">
+          <div class="carousel-caption">
+            <p class="w-25">We Are The Series</p>
+          </div>
+        </div>
+      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+  </div>
+
+
+  <!--  -->
+  <div class="con-box mt-5 p-3">
+    <h4 class="mx-4" style="font-weight: 700;">Continue Watching</h4>
+    <div class="d-flex">
+      <i class="fa fa-less-than" id="scrollLeft"></i>&emsp;
+      <div class="box-movies mt-2 p-3">
+      </div>&emsp;
+      <i class="fa fa-greater-than" id="scrollRight"></i>
+    </div>
+  </div>
+  
+  <!--  -->
+  <div class="con-box mt-3 p-3">
+    <h4 class="mx-4" style="font-weight: 700;">Latest Update <i style="font-size: 1rem;" class="fa fa-greater-than"></i> </h4>
+    <div class="d-flex">
+      <i class="fa fa-less-than" id="scrollLeft"></i>&emsp;
+      <div class="late-movies mt-2 p-3">
+      </div>&emsp;
+      <i class="fa fa-greater-than" id="scrollRight"></i>
+    </div>
+  </div>
+
+   <!--  -->
+   <div class="con-box mt-3 p-3">
+    <h4 class="mx-4" style="font-weight: 700;">Top K-Drama <i style="font-size: 1rem;" class="fa fa-greater-than"></i> </h4>
+    <div class="d-flex">
+      <i class="fa fa-less-than" id="scrollLeft"></i>&emsp;
+      <div class="Kdrama-movies mt-2 p-3">
+      </div>&emsp;
+      <i class="fa fa-greater-than" id="scrollRight"></i>
+    </div>
+  </div>
+
+  <!--  -->
+  <div class="con-box mt-3 p-3">
+    <h4 class="mx-4" style="font-weight: 700;">Top C-Drama <i style="font-size: 1rem;" class="fa fa-greater-than"></i> </h4>
+    <div class="d-flex">
+      <i class="fa fa-less-than" id="scrollLeft"></i>&emsp;
+      <div class="Cdrama-movies mt-2 p-3">
+      </div>&emsp;
+      <i class="fa fa-greater-than" id="scrollRight"></i>
+    </div>
+  </div>
+
+  <!--  -->
+  <div class="con-box mt-3 p-3">
+    <h4 class="mx-4" style="font-weight: 700;">Hollywood <i style="font-size: 1rem;" class="fa fa-greater-than"></i> </h4>
+    <div class="d-flex">
+      <i class="fa fa-less-than" id="scrollLeft"></i>&emsp;
+      <div class="Hollywood-movies mt-2 p-3">
+      </div>&emsp;
+      <i class="fa fa-greater-than" id="scrollRight"></i>
+    </div>
+  </div>
+
+  <!--  -->
+  <div class="con-box mt-3 p-3">
+    <h4 class="mx-4" style="font-weight: 700;">Anime <i style="font-size: 1rem;" class="fa fa-greater-than"></i> </h4>
+    <div class="d-flex">
+      <i class="fa fa-less-than" id="scrollLeft"></i>&emsp;
+      <div class="anime mt-2 p-3">
+      </div>&emsp;
+      <i class="fa fa-greater-than" id="scrollRight"></i>
+    </div>
+  </div>
+
+  <!--  -->
+  <div class="con-box mt-3 p-3">
+    <h4 class="mx-4" style="font-weight: 700;">Upcoming <i style="font-size: 1rem;" class="fa fa-greater-than"></i> </h4>
+    <div class="d-flex">
+      <i class="fa fa-less-than" id="scrollLeft"></i>&emsp;
+      <div class="up-movies mt-2 p-3">
+      </div>&emsp;
+      <i class="fa fa-greater-than" id="scrollRight"></i>
+    </div>
+  </div>
+
+  <!--  -->
+  <div class="footer">
+    <div style="width: 90%;" class="offcanvas offcanvas-bottom h-100 m-auto bg-dark" tabindex="-1" id="offcanvasBottom" aria-labelledby="offcanvasBottomLabel">
+      <div class="offcanvas-header" style="background-color:rgba(0, 0, 0, 0.6);">
+        <i class="fa fa-less-than" class="btn-close" type="button" data-bs-dismiss="offcanvas" aria-label="Close" style="font-size: 1rem;margin-right: 20px; color: white;"></i>
+        <input onkeyup="filterItems()" type="text" placeholder="Search..." class="offcanvas-title form-control" id="offcanvasRightLabel" style="font-size: 20px; border: 2px solid white;border-top: none;">
+      </div>
+      <div class="offcanvas-body small">
+        <div class="button-container mt-3">
+          <button class="filter-btn active" id="all">All</button>
+          <button class="filter-btn" id="tvseries">TVSeries</button>
+          <button class="filter-btn" id="movies">Movies</button>
+          <button class="filter-btn" id="anime">Anime</button>
+          <button class="filter-btn" id="hollywood">Hollywood</button>
+      </div>
+      <hr class="text-light">
+      <div class="mt-1">
+        <h3>Popular Search</h3>
+        <div class="row">
+          
+        </div>
+      </div>
+      </div>
+    </div>
+
+    <!--  -->
+    <div style="height: 92%; margin-top: auto;" class="offcanvas offcanvas-start bg-dark w-100" tabindex="-1" id="offcanvasLeft" aria-labelledby="offcanvasLeftLabel">
+      <div class="offcanvas-header">
+        <h3 class="offcanvas-title text-center w-100" id="offcanvasLeftLabel">Frequently Asked Question</h3>
+        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+      </div>
+      <div class="offcanvas-body w-75 m-auto">
+        <div class="accordion accordion-flush" id="accordionFlushExample">
+          <div class="accordion-item">
+            <h2 class="accordion-header">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+                Video error?
+              </button>
+            </h2>
+            <div id="flush-collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+              <div class="accordion-body">
+                Try reload it <i class="fa-solid fa-arrow-rotate-left text-dark"></i>  if it still not working send episode number and title or link to here .(Note: Our webside and app test and debug using google chrome)
+              </div>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <h2 class="accordion-header">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
+                Subtitle error?
+              </button>
+            </h2>
+            <div id="flush-collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+              <div class="accordion-body">Send episode number and title or link to here</div>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <h2 class="accordion-header">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
+                Other error?
+              </button>
+            </h2>
+            <div id="flush-collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+              <div class="accordion-body">Tell us what's your problem to here</div>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <h2 class="accordion-header">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseFour" aria-expanded="false" aria-controls="flush-collapseFour">
+                Request drama?
+              </button>
+            </h2>
+            <div id="flush-collapseFour" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+              <div class="accordion-body">Send title of your drama or anime to here</div>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <h2 class="accordion-header">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseFive" aria-expanded="false" aria-controls="flush-collapseFive">
+                Redirect ads problem?
+              </button>
+            </h2>
+            <div id="flush-collapseFive" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+              <div class="accordion-body">Follow this video introduction for those who can't watch video. *Note use browser such as Google Chrome, Firefox, safari ... </div>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <h2 class="accordion-header">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseSix" aria-expanded="false">
+                Install mobile app?
+              </button>
+            </h2>
+            <div id="flush-collapseSix" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+              <div class="accordion-body">his Facebook post is no longer available. It may have been removed or the privacy settings of the post may have changed.</div>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <h2 class="accordion-header">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseSeven" aria-expanded="false" aria-controls="flush-collapseThree">
+                Change Subtitle Style?
+              </button>
+            </h2>
+            <div id="flush-collapseSeven" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+              <div class="accordion-body">
+                <h5 class="text-light">Andriod</h5>
+                <ol>
+                  <li><a href="#">Open your device's Settings app.</a></li>
+                  <li><a href="#">Tap Accessibility, then tap Caption preferences.</a></li>
+                  <li><a href="#">Tap Caption size and style</a></li>
+                  <li><a href="#">To change caption size, tap Text size, then select the text size.</a></li>
+                  <li><a href="#">To change the style and color for caption text and background, tap Caption style, then select the style.</a></li>
+                </ol>
+                <h5 class="mt-3 text-light">IOS</h5>
+                <ol>
+                  <li><a href="#">Go to Settings  > Accessibility > Subtitles & Captioning.</a></li>
+                  <li><a href="#">If you prefer closed captioning or subtitles for the deaf and hard of hearing when available, turn on Closed Captions + SDH.</a></li>
+                  <li><a href="#">Tap Style, then choose an existing caption style or create a new style based on the following:</a></li>
+                    <ul class="mx-5">
+                      <li><a href="#">Font, size, and color</a></li>
+                      <li><a href="#">Background color and opacity</a></li>
+                      <li><a href="#">Text opacity, edge style, and highlight</a></li>
+                    </ul>
+                </ol>
+                <h5 class="mt-3 text-light">Windows</h5>
+                <ol>
+                  <li><a href="#">On a Windows 10 PC, go to Settings.</a></li>
+                  <li><a href="#">Tap or clickEase of Access.</a></li>
+                  <li><a href="#">Tap or click Closed captions</a></li>
+                  <li><a href="#">Customize how closed captions will be displayed on your screens.
+                    Note Your changes will be reflected in the Preview pane at the top of the window as you make them.</a></li>
+                </ol>
+              </div>
+            </div>
+          </div>
+        </div>
+        <center>
+          <a href="https://www.facebook.com/le.eu.560/"><button class="btn btn-primary rounded w-50 mt-5" type="button" ><i style="font-size: 1.25rem;" class="fa-brands fa-facebook"></i> Find us on Facebook</button></a>
+        </center>
+      </div>
+    </div>
+
+    <!--  -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1 class="modal-title fs-5 text-dark" id="exampleModalLabel">Chat With Us</h1>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <p class="text-dark">You can <strong class="text-primary">Request Drama</strong> or <strong class="text-danger">Report A Problem</strong></p>
+            <button type="button" class="btn btn-light border-black form-control">https://www.facebook.com/le.eu.560/ <i class="fa fa-link text-dark"></i></button>
+          </div>
+          <div class="modal-footer d-flex w-100">
+            <a href="https://www.facebook.com/le.eu.560/"><button type="button" class="btn btn-primary" data-bs-dismiss="modal">Facebook <i class="fa-brands fa-facebook"></i></button></a>
+            <a href="https://www.facebook.com/messages/t/100049538918931"><button type="button" style="background-color: deepskyblue;" class="btn text-light">Messager <i class="fa-brands fa-facebook-messenger"></i></button></a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- offcanRight -->
+    <div style="height: 91%; margin-top: auto;" class="offcanvas offcanvas-end w-100 bg-dark" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
+      
+      <div class="offcanvas-body">
+        <div class="btn-container">
+          <button class="fil-btn active" id="all">All</button>
+          <button class="fil-btn" id="tvseries">TVSeries</button>
+          <button class="fil-btn" id="movies">Movies</button>
+          <button class="fil-btn" id="anime">Anime</button>
+          <button class="fil-btn" id="hollywood">Hollywood</button>
+        </div>
+        <div class="btn-container mt-2">
+          <button class="filt-btn active" id="all">All Subtitles</button>
+          <button class="filt-btn">English</button>
+          <button class="filt-btn">Khmer</button>
+          <button class="filt-btn">Indonesia</button>
+          <button class="filt-btn">Malay</button>
+          <button class="filt-btn">Thai</button>
+          <button class="filt-btn">Arabic</button>
+        </div>
+        <div class="btn-container mt-3">
+          <button class="filte-btn active mt-1" id="all">All Regions</button>
+          <button class="filte-btn mt-1">South Korea</button>
+          <button class="filte-btn mt-1">Chinese</button>
+          <button class="filte-btn mt-1">United States</button>
+          <button class="filte-btn mt-1">Thailand</button>
+          <button class="filte-btn mt-1">Japanese</button>
+          <button class="filte-btn mt-1">Hong Kong</button>
+          <button class="filte-btn mt-1">Taiwan</button>
+        </div>
+        <div class="btn-container mt-2">
+          <button class="filter-btn active" id="all">Latest Update</button>
+          <button class="filter-btn">Popular</button>
+          <button class="filter-btn">Release Date</button>
+      </div>
+      <div class="epmovies mt-3">
+        <div id="row" class="row">
+            
+          </div>
+        </div>
+      </div>
+      
+    </div>
+    <p>Design by Mr.Light and Contribute by KissKH</p>
+  </div>
+</body>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/5.1.3/js/bootstrap.bundle.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/js/all.min.js"></script>
+<script src="index.js"></script>
+</html>

@@ -1,0 +1,57 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Button Toggle</title>
+    <link rel="stylesheet" href="styles.css">
+    
+    <style>
+.button-container {
+    display: flex;
+    gap: 10px;
+}
+
+.filter-btn {
+    padding: 10px 20px;
+    border: none;
+    background-color: #ccc;
+    cursor: pointer;
+    border-radius: 15px;
+}
+
+.filter-btn.active {
+    background-color: #007bff;
+    color: #fff;
+}
+    </style>
+</head>
+<body>
+    <div class="button-container">
+        <button class="filter-btn active" id="all">All</button>
+        <button class="filter-btn" id="tvseries">TVSeries</button>
+        <button class="filter-btn" id="movies">Movies</button>
+        <button class="filter-btn" id="anime">Anime</button>
+        <button class="filter-btn" id="hollywood">Hollywood</button>
+    </div>
+    <button class="btn btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasBottom" aria-controls="offcanvasBottom">Toggle bottom offcanvas</button>
+    
+
+    <div class="box w-50 h-25" style="background-color: whitesmoke;">fffffffffffffffffffff</div>
+    <script src="script.js"></script>
+</body>
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const buttons = document.querySelectorAll('.filter-btn');
+    
+    buttons.forEach(button => {
+        button.addEventListener('click', () => {
+            buttons.forEach(btn => btn.classList.remove('active'));
+            button.classList.add('active');
+        });
+    });
+});
+</script>
+</html>
